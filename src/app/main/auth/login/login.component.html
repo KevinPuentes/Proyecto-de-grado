@@ -1,0 +1,26 @@
+<form class="form-signin" (ngSubmit)="login(f)" #f="ngForm">
+    <div class="text-center mb-4 mt-5">
+        <img class="mb-4 mt-5" src="/assets/img/system/logoE.png" width="300" alt="">
+        <h1 class="h3 mb-3 mt-3 font-weight-normal">Iniciar Sesión</h1>
+    </div>
+
+    <div class="form-label-group mt-5">
+        <input type="email" id="inputEmail" email class="form-control" [(ngModel)]="usuario.email" name="email" required autofocus>
+        <label for="inputEmail">Correo Electronico</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" [(ngModel)]="usuario.password" name="password" required>
+        <label for="inputPassword">Contraseña</label>
+    </div>
+
+    <div class="checkbox mb-3">
+        <label>
+        <input type="checkbox" [(ngModel)]="recordarme" name="recordarme"> Recordar usuario
+      </label>
+    </div>
+    <button class="btn btn-lg btn-success btn-block" type="submit">Iniciar Sesión</button>
+    <div class="text-center mt-5">
+        <p class="mt-0 mb-3 text-muted text-center">Powered by <a href="mailto:luis.gutierrez@themisapp.com.co">ThemisApp</a> - &copy; 2019 - 2020</p>
+    </div>
+</form>

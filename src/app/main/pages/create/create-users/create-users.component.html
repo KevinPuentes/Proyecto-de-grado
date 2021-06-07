@@ -1,0 +1,84 @@
+<div class="container mt-4">
+  <h1 class="display-4" *ngIf="id == 'nuevo'">Crear Usuario</h1>
+  <h1 class="display-4" *ngIf="id != 'nuevo'">Editar Usuario</h1>
+  <hr />
+  <form (ngSubmit)="createUser(newUser)" #newUser="ngForm">
+    <div class="card">
+      <div class="card-header">Información Basica</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Nombres</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Juan"
+              [(ngModel)]="user.name"
+              name="name"
+            />
+          </div>
+          <div class="col">
+            <label class="form-label">Apellidos</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Topo"
+              [(ngModel)]="user.surname"
+              name="surname"
+            />
+          </div>
+          <div class="col">
+            <label class="form-label">Fecha de Nacimiento</label>
+            <input
+              type="date"
+              class="form-control"
+              [(ngModel)]="user.birthday"
+              name="birthday"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-header">Información de contacto</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Telefono</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="123456"
+              [(ngModel)]="user.phone"
+              name="phone"
+            />
+          </div>
+          <div class="col">
+            <label class="form-label">Dirección</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="calle falsa 123"
+              [(ngModel)]="user.address"
+              name="address"
+            />
+          </div>
+          <div class="col">
+            <label class="form-label">Correo Electronico</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="juantopo69@example.com"
+              [(ngModel)]="user.mail"
+              name="mail"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+  </form>
+</div>

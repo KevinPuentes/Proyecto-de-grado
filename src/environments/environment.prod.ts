@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  urldb: 'ACÁ VA LA URL DE LA BASE DE DATOS',
-  GoogleKey: 'ACÁ VA LA KEY DE GOOGLE',
+  urldb: 'https://proyectogrado-2a01a-default-rtdb.firebaseio.com/',
+  GoogleKey: 'AIzaSyAMD8mds7HTEj29TTL2T95wuWUQ8PtAu7w',
 };

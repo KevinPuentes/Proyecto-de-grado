@@ -6,4 +6,7 @@ export class UsuarioModel {
   phone: string;
   address: string;
   mail: string;
+  document: string;
+  fecha_expedicion:string;
+  tipo_documento:string;
 }

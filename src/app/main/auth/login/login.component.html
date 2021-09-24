@@ -1,26 +1,59 @@
-<form class="form-signin" (ngSubmit)="login(f)" #f="ngForm">
-    <div class="text-center mb-4 mt-5">
-        <img class="mb-4 mt-5" src="/assets/img/system/logoE.png" width="300" alt="">
-        <h1 class="h3 mb-3 mt-3 font-weight-normal">Iniciar Sesión</h1>
-    </div>
 
-    <div class="form-label-group mt-5">
-        <input type="email" id="inputEmail" email class="form-control" [(ngModel)]="usuario.email" name="email" required autofocus>
-        <label for="inputEmail">Correo Electronico</label>
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-form">
+            <form (ngSubmit)="login(login2)"#login2='ngForm'>
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        
+                        <input type="text" id="login" [(ngModel)]="usuario.email" class="input" name="email" placeholder="Usuario">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input type="password" id="password" class="input" data-type="password" [(ngModel)]="usuario.password" name="password" placeholder="Contraseña">
+                        
+                    </div>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot">Forgot Password?</a>
+                    </div>
+                </div>
+            </form>
+            <div class="sign-up-htm">
+                <div class="group">
+                    <label for="user" class="label">Username</label>
+                    <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Password</label>
+                    <input id="pass" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Repeat Password</label>
+                    <input id="pass" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Email Address</label>
+                    <input id="pass" type="text" class="input">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Sign Up">
+                </div>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                    
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" [(ngModel)]="usuario.password" name="password" required>
-        <label for="inputPassword">Contraseña</label>
-    </div>
-
-    <div class="checkbox mb-3">
-        <label>
-        <input type="checkbox" [(ngModel)]="recordarme" name="recordarme"> Recordar usuario
-      </label>
-    </div>
-    <button class="btn btn-lg btn-success btn-block" type="submit">Iniciar Sesión</button>
-    <div class="text-center mt-5">
-        <p class="mt-0 mb-3 text-muted text-center">Powered by <a href="mailto:luis.gutierrez@themisapp.com.co">ThemisApp</a> - &copy; 2019 - 2020</p>
-    </div>
-</form>
+</div>

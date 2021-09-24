@@ -1,84 +1,196 @@
+<app-header></app-header>
 <div class="container mt-4">
-  <h1 class="display-4" *ngIf="id == 'nuevo'">Crear Usuario</h1>
-  <h1 class="display-4" *ngIf="id != 'nuevo'">Editar Usuario</h1>
-  <hr />
-  <form (ngSubmit)="createUser(newUser)" #newUser="ngForm">
-    <div class="card">
-      <div class="card-header">Información Basica</div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col">
-            <label class="form-label">Nombres</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Juan"
-              [(ngModel)]="user.name"
-              name="name"
-            />
+    <h1 class="display-4" *ngIf="id == 'nuevo'">Crear Usuario</h1>
+    <h1 class="display-4" *ngIf="id != 'nuevo'">Editar Usuario</h1>
+    <hr />
+    <form (ngSubmit)="createUser(newUser)" #newUser="ngForm">
+      <div class="card">
+        <div class="card-header">Información Basica</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <label class="form-label">Nombres</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nombres del Beneficiario"
+                [(ngModel)]="user.name"
+                name="name"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label">Apellidos</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Apellidos del Beneficiario"
+                [(ngModel)]="user.surname"
+                name="surname"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label">Fecha de Nacimiento</label>
+              <input
+                type="date"
+                class="form-control"
+                [(ngModel)]="user.birthday"
+                name="birthday"
+              />
+            </div>
           </div>
-          <div class="col">
-            <label class="form-label">Apellidos</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Topo"
-              [(ngModel)]="user.surname"
-              name="surname"
-            />
+          <div class="row">
+            <div class="col">
+              <label class="form-label">     </label>              
+            </div>            
           </div>
-          <div class="col">
-            <label class="form-label">Fecha de Nacimiento</label>
-            <input
-              type="date"
-              class="form-control"
-              [(ngModel)]="user.birthday"
-              name="birthday"
-            />
+          <div class="row">
+            <div class="col">
+              <label class="form-label">Tipo de Documento</label>
+              <div class="row"> 
+                  <div class="col">
+                <select name="menu">
+                    <option>C.C</option>
+                    <option>Nit</option>
+                    <option>Pasaporte</option>
+                  </select>
+               </div>
+            </div>
+              
+            </div>
+            <div class="col">
+              <label class="form-label">Numero de documento</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=""
+                [(ngModel)]="user.surname"
+                name="surname"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label">Fecha de Expedición</label>
+              <input
+                type="date"
+                class="form-control"
+                [(ngModel)]="user.birthday"
+                name="birthday"
+              />
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <label class="form-label">Telefono</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Numero de celular"
+                  [(ngModel)]="user.phone"
+                  name="phone"
+                />
+              </div>
+              <div class="col">
+                <label class="form-label">Dirección</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Calle 11 # 22 - 22"
+                  [(ngModel)]="user.address"
+                  name="address"
+                />
+              </div>
+              <div class="col">
+                <label class="form-label">Correo Electronico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="abcdfe@example.com"
+                  [(ngModel)]="user.mail"
+                  name="mail"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card mt-3">
-      <div class="card-header">Información de contacto</div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col">
-            <label class="form-label">Telefono</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="123456"
-              [(ngModel)]="user.phone"
-              name="phone"
-            />
+      <div class="card mt-3">
+        <div class="card-header">Información del espacio asignado</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <label class="form-label">Tipo</label>
+              <div class="row"> 
+                <div class="col">
+              <select name="menu">
+                  <option>Caseta</option>
+                  <option>Local</option>
+                  <option>Espacio delimitado</option>
+                </select>
+             </div>
           </div>
-          <div class="col">
-            <label class="form-label">Dirección</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="calle falsa 123"
-              [(ngModel)]="user.address"
-              name="address"
-            />
-          </div>
-          <div class="col">
-            <label class="form-label">Correo Electronico</label>
-            <input
-              type="email"
-              class="form-control"
-              placeholder="juantopo69@example.com"
-              [(ngModel)]="user.mail"
-              name="mail"
-            />
+            </div>
+            <div class="col">
+              <label class="form-label">Dirección</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=""
+                [(ngModel)]="user.address"
+                name="address"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label">Vencimiento de Asignación</label>
+              <input
+                type="date"
+                class="form-control"
+                [(ngModel)]="user.birthday"
+                name="birthday"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <br />
-    <div class="d-grid gap-2 col-6 mx-auto">
-      <button class="btn btn-primary" type="submit">Guardar</button>
-    </div>
-  </form>
-</div>
+      <div class="card mt-3">
+        <div class="card-header">Información del encargado</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <label class="form-label">Nombres</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nombres del encargado"
+                [(ngModel)]="user.phone"
+                name="phone"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label">Apellidos</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Apellidos del encargado"
+                [(ngModel)]="user.address"
+                name="address"
+              />
+            </div>
+            <div class="col">
+              <label class="form-label">Código de encargado</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Código unico"
+                [(ngModel)]="user.mail"
+                name="mail"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+      </div>
+    </form>
+  </div>

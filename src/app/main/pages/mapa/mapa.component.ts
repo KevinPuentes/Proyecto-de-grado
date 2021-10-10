@@ -30,7 +30,7 @@ export class MapaComponent implements OnInit{
    */
   private _zoom = 11;
   private _center: Array<number> = [-74.120023, 4.699263];
-  private _basemap = "streets";
+  private _basemap = "streets-night-vector";
   private _loaded = false;
   private _view!: esri.MapView;
 
@@ -70,9 +70,10 @@ export class MapaComponent implements OnInit{
   async initializeMap() {
     try {
       // Load the modules for the ArcGIS API for JavaScript
-      const [EsriMap, EsriMapView] = await loadModules([
+      const [EsriMap, EsriMapView, EsriFeatureLayer] = await loadModules([
         "esri/Map",
-        "esri/views/MapView"
+        "esri/views/MapView",
+        "esri/layers/FeatureLayer"
       ]);
 
       // Configure the Map
@@ -96,6 +97,9 @@ export class MapaComponent implements OnInit{
     } catch (error) {
       console.log("EsriLoader: ", error);
     }
+
+// const featureLayer: esri.FeatureLayer = new EsriFeatureLayer ();
+    
   }
 
   ngOnInit() {

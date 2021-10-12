@@ -29,9 +29,9 @@ export class MapaComponent implements OnInit{
    * _basemap sets type of map
    * _loaded provides map loaded status
    */
-  private _zoom = 11;
+  private _zoom = 12;
   private _center: Array<number> = [-74.120023, 4.699263];
-  private _basemap = "streets-night-vector";
+  private _basemap = "topo-vector";
   private _loaded = false;
   private _view!: esri.MapView;
   private _layer = "";

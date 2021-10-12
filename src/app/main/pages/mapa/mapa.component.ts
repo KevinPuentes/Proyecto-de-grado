@@ -5,6 +5,7 @@ import { Component,
   Input,
   Output,
   EventEmitter,
+  Injectable,
   OnDestroy } from '@angular/core';
 import {loadModules} from 'esri-loader';
 
@@ -33,6 +34,7 @@ export class MapaComponent implements OnInit{
   private _basemap = "streets-night-vector";
   private _loaded = false;
   private _view!: esri.MapView;
+  private _layer = "";
 
   get mapLoaded(): boolean {
     return this._loaded;
@@ -70,7 +72,7 @@ export class MapaComponent implements OnInit{
   async initializeMap() {
     try {
       // Load the modules for the ArcGIS API for JavaScript
-      const [EsriMap, EsriMapView, EsriFeatureLayer] = await loadModules([
+      const [EsriMap, EsriMapView, FeatureLayer] = await loadModules([
         "esri/Map",
         "esri/views/MapView",
         "esri/layers/FeatureLayer"
@@ -90,6 +92,12 @@ export class MapaComponent implements OnInit{
         zoom: this._zoom,
         map: map
       };
+      map.add(new FeatureLayer({
+        id: "id01",
+        url: "https://services.arcgis.com/8DAUcrpQcpyLMznu/arcgis/rest/services/BOGOTSINHUECOS/FeatureServer/0",
+        opacity: 0.50
+      }));
+
 
       this._view = new EsriMapView(mapViewProperties);
       await this._view.when();
@@ -97,6 +105,8 @@ export class MapaComponent implements OnInit{
     } catch (error) {
       console.log("EsriLoader: ", error);
     }
+
+    
 
 // const featureLayer: esri.FeatureLayer = new EsriFeatureLayer ();
     

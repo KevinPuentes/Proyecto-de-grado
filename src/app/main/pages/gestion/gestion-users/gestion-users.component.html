@@ -2,7 +2,7 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col">
-      <h1 class="display-4">Usuarios</h1>
+      <h1 class="display-4">Usuarios Beneficiarios</h1>
     </div>
     <div class="col-2">
       <div class="d-grid">
@@ -23,29 +23,420 @@
         <th scope="col">#</th>
         <th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
-        <th scope="col">Telefono</th>
-        <th scope="col">Dirección</th>
+        <th scope="col">Espacio Asignado</th>
+        <th scope="col">Tipo</th>
         <th scope="col">Correo</th>
+        <th scope="col">Ver Mapa</th>
         <th scope="col">Editar</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of users; let i = index">
-        <th scope="row">{{ i + 1 }}</th>
-        <td>{{ item.name }}</td>
-        <td>{{ item.surname }}</td>
-        <td>{{ item.phone }}</td>
-        <td>{{ item.address }}</td>
-        <td>{{ item.mail }}</td>
+      <tr>
+        <th scope="row">1</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Juan</td>
+        <td>Forero</td>        
+        <td>Calle 3 #12-44</td>
+        <td>Caseta</td>
+        <td>juanf@gmail.com</td>
         <td>
           <button
             class="btn btn-primary btn-sm"
-            [routerLink]="[item.id_user]"
+            [routerLink]=""
             type="button"
           >
-            Editar
+            Ver Mapa
           </button>
+          
         </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Felipe</td>
+        <td>Farias</td>        
+        <td>Calle 35 #1a-44</td>
+        <td>Espacio Delimitado</td>
+        <td>felipf@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Perla</td>
+        <td>Montero</td>        
+        <td>Carrera 76 #47-34</td>
+        <td>Caseta</td>
+        <td>perlm@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Raikou</td>
+        <td>Mendoza</td>        
+        <td>Calle 67 #54 bis - 33</td>
+        <td>Local</td>
+        <td>raikm@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Julian</td>
+        <td>Fonseca</td>        
+        <td>Calle 125 #11-73</td>
+        <td>Caseta</td>
+        <td>julif@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Alberto</td>
+        <td>Grande</td>        
+        <td>Calle 22 #98-55</td>
+        <td>Local</td>
+        <td>albertog@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Fernando</td>
+        <td>Uribe</td>        
+        <td>Transversal 45 #65-07</td>
+        <td>Local</td>
+        <td>fernanu@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Maira</td>
+        <td>Uribe</td>        
+        <td>Transversal 3 #1-04</td>
+        <td>Espacio Delimitado</td>
+        <td>mairau@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Alejandra</td>
+        <td>Bautista</td>        
+        <td>Calle 69 #99-44</td>
+        <td>Caseta</td>
+        <td>aleba@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>Daniel</td>
+        <td>Parra</td>        
+        <td>Carrera 105 #135-42</td>
+        <td>Caseta</td>
+        <td>parrad@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <!-- <td>hola{{ item.name }}</td>
+        <td>atodos{{ item.surname }}</td>
+        <td>losniños{{ item.phone }}</td>
+        <td>del vasv{{ item.address }}</td>
+        <td>mundomu8nd@gmail.com{{ item.mail }}</td> -->
+
+        
+        <td>David</td>
+        <td>Gaona</td>        
+        <td>Carrera 33 #65-94</td>
+        <td>Caseta</td>
+        <td>davidg@gmail.com</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            [routerLink]=""
+            type="button"
+          >
+            Ver Mapa
+          </button>
+          
+        </td>
+
+        <td>
+          <button
+          class="btn btn-primary btn-sm"
+          [routerLink]=""
+          type="button"
+        >
+            Editar
+        </button>
+        </td>
+
+
       </tr>
     </tbody>
   </table>
